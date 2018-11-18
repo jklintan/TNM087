@@ -1,6 +1,5 @@
 
 %TASK1
-% 
 % BookCover = imread('book-cover.tif'); %Read in image
 % BCd = im2double(BookCover);
 % 
@@ -66,4 +65,41 @@
 % imhist(Ph)
 
 %TASK5
+% ShadePattern = imread('Shade_pattern.tif');
+% SP = im2double(ShadePattern);
+% 
+% %imshow(SP);
+% %figure; hold on;
+% %imhist(SP);
+% 
+% %Image shading, perform elementwise division f(x,y)=g(x,y)/h(x,y)
+% ShadingIm = imread('Shade_estimate.tif');
+% SI = im2double(ShadingIm);
+% 
+% RecovIm = SP./SI;
+% imshow(RecovIm);
+% figure;
+% %imhist(RecovIm);
+% 
+% SegmIm = im2bw(RecovIm,0.35);
+% imshow(SegmIm)
+
+%TASK6
+% I = zeros(400,600,3);
+% 
+% %Creating the yellow cross
+% I(150:220,:,1)=1;
+% I(150:220,:,2)=1;
+% I(:,150:220,1)=1;
+% I(:,150:220,2)=1;
+% 
+% %Creating the blue squares
+% I(1:150,1:150,3)=1;
+% I(1:150,220:600,3)=1;
+% I(220:400,1:150,3)=1;
+% I(220:400,220:600,3)=1;
+% 
+% imshow(I)
+
+
 
